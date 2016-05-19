@@ -30,7 +30,7 @@
 
 // Post Section
 section.post {
-	margin-bottom: 80px;
+	margin-bottom: 50px;
 }
 
 // Back home button
@@ -42,8 +42,14 @@ section.post {
 }
 
 // Post title
-.post-title {
+.post-title:hover {
+  color: #9EC0F8;
+}
 
+.post-title:after {
+    content:' ';
+    display: block;
+    border: 1px solid #F5F5F5;
 }
 
 .post-title-link {
@@ -58,6 +64,7 @@ section.post {
 
 // Post meta
 .post-meta {
+  margin: 0;
   font-size: 13px;
   font-weight: bold;
 	.post-date {
@@ -242,4 +249,13 @@ a.read-more {
     color: #5f99cf;
     border-color: #5f99cf;
   }
+}
+
+section.post.coming-soon a, section.post.coming-soon .post-date {
+  pointer-events: none;
+  color: #6E6E6E !important;
+}
+
+section.post.coming-soon .post-title {
+  text-decoration: line-through;
 }

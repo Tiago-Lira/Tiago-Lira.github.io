@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for post in site.posts %}
-<section class="post">
+<section class="post {% if post.coming_soon %}coming-soon{% endif %}">
   <header class="post-header">
     <p class="post-meta">
       <span class="post-date">
@@ -24,6 +24,9 @@ layout: default
       {% if post.link %}
       <a class="post-title-link" href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-external-link"></i></a>
       {% endif %}
+      {% if post.coming_soon %}
+        <small>(Coming soon)</small>
+      {% endif %}
     </h4>
 
     {% if post.author %}
@@ -34,7 +37,7 @@ layout: default
 
     </header>
 
-    {% if post.description %}
+    {% if post.description and post.coming_soon != true %}
     <div class="post-description">
       <p>
         {{ post.description }}

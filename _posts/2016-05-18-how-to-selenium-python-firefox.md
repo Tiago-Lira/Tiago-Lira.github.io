@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Using selenium to scrape
-description: "Selenium is a wonderful tool to testing, but in some cases can be an awesome tool for scraping."
-categories: Python Selenium Scraping
+title: "HOW TO: Docker + Selenium + Python + Firefox"
+description: "Using firefox + selenium + python with Docker containers"
+categories: Python Selenium Docker
 comments: true
 coming_soon: true
 ---
